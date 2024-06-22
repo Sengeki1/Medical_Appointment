@@ -4,7 +4,8 @@ exports.getAddClinic = (req, res, next) => {
   clinic.find().then((clinics) => {
     res.render('Clinic/index', {
       clinics: clinics,
-      pageTitle: 'All clinics'
+      pageTitle: 'All clinics',
+      user: req.user
     });
   }).catch(err => {
     console.log(err);
@@ -12,11 +13,11 @@ exports.getAddClinic = (req, res, next) => {
 };
 
 exports.showAddClinic = (req, res, next) => {
-  res.render('Clinic/edit_clinic',);
+  res.render('Clinic/edit_clinic', { user: req.user });
 }
 
 exports.success = (req, res, next) => {
-  res.render('Clinic/success',);
+  res.render('Clinic/success', { user: req.user });
 };
 
 exports.postAddClinic = (req, res, next) => {

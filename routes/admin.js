@@ -3,20 +3,21 @@ const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
 const cors = require("cors")
 const adminController = require('../controllers/admin');
+const noCache = require('../middleware/noCache');
 
 const router = express.Router();
 
 // /admin/show-clinic => GET
-router.get('/show-clinic', cors(), auth, admin, adminController.getAddClinic);
+router.get('/show-clinic', cors(), noCache, auth, admin, adminController.getAddClinic);
 
 // /admin/add-clinic => POST
-router.post('/add-clinic', cors(), auth, admin, adminController.postAddClinic);
+router.post('/add-clinic', cors(), noCache, auth, admin, adminController.postAddClinic);
 
 // /admin/add-clinic => GET
-router.get('/add-clinic', cors(), auth, admin, adminController.showAddClinic);
+router.get('/add-clinic', cors(), noCache, auth, admin, adminController.showAddClinic);
 
 // /admin/show-clinic-created => GET
-router.get('/show-clinic-created', cors(), auth, admin, adminController.success);
+router.get('/show-clinic-created', noCache, cors(), auth, admin, adminController.success);
 
 
 // /admin/edit-clinic/:clinicId => GET

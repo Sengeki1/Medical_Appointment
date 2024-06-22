@@ -6,34 +6,39 @@
     <title>Clinics</title>
   </head>
   <body>
-    <main>
-        <% if (clinics.length > 0) { %>
-            <div class="grid">
-                <% for (let clinic of clinics) { %>
-                    <article class="card clinic-item">
-                        <header class="card__header">
-                            <h1 class="clinic__title">
-                                <%= clinic.clinic_name %>
-                            </h1>
-                        </header>
-                        <div class="card__content">
-                            <h2 class="clinic__location">$
-                                <%= clinic.location %>
-                            </h2>
-                            <p class="clinic__description">
-                                <%= clinic.type %> 
+    <% if (user) { %>
+        <main>
+            <% if (clinics.length > 0) { %>
+                <div class="grid">
+                    <% for (let clinic of clinics) { %>
+                        <article class="card clinic-item">
+                            <header class="card__header">
+                                <h1 class="clinic__title">
+                                    <%= clinic.clinic_name %>
+                                </h1>
+                            </header>
+                            <div class="card__content">
+                                <h2 class="clinic__location">$
+                                    <%= clinic.location %>
+                                </h2>
+                                <p class="clinic__description">
+                                    <%= clinic.type %> 
 
-                                <%= clinic.doctor %>
+                                    <%= clinic.doctor %>
 
-                                <%= clinic.employes %>
-                            </p>
-                        </div>
-                    </article>
+                                    <%= clinic.employes %>
+                                </p>
+                            </div>
+                        </article>
+                        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No clinics!</h1>
                     <% } %>
-            </div>
-            <% } else { %>
-                <h1>No clinics!</h1>
-                <% } %>
-    </main>
+        </main>
+    <% } else { %>
+        <h1>Unauthorized</h1>
+        <p>You do not have access to this page.</p>
+        <% } %>
   </body>
 </html>

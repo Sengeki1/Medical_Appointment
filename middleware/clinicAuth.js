@@ -11,6 +11,9 @@ const verifyToken = async (req, res, next) => {
   try {
     const decoded = jwt.verify(authToken, config.TOKENCLINIC_KEY);
     const clinicx = await Clinic.findById(decoded.id)
+    if (!clinicx) {
+      return res.status(404).send("Clinic not found");
+    }
     req.user = clinicx;
     
   } catch (err) {

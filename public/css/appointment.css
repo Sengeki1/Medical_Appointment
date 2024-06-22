@@ -1,3 +1,36 @@
+#logout {
+    line-height: 12px;
+    width: 18px;
+    font-size: 8pt;
+    font-family: tahoma;
+    margin-top: 20px;
+    margin-right: 150px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.logout {
+    border: 3px black; 
+    border-radius: 40px; 
+    background-color: black; 
+    padding: 10px 50px;
+    font-size: 16px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: lightskyblue;
+    color: black;
+    border: 3px lightskyblue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 50px;
+    transition: 300ms ease-in-out;
+}
+
 .overlay {
     text-align: center;
     font-family: Arial;
