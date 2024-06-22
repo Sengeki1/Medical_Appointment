@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/appointment.css" rel="stylesheet">
+        <title>Register</title>
+        <script src="https://kit.fontawesome.com/4e4c23d5e2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="overlay">
+            <div class="header">
+                <h1>Appointment</h1>
+            </div>
+            <br>
+            <form id="register" action="/singup" method="POST">
+                <div id="input-field">
+                    <label for="appointment_type"></label>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="appointment_type" name="appointment_type" type="text" placeholder="Appointment Type">
+                </div>
+                <div id="input-field">
+                    <label for="current_location"></label>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input id="current_location" name="current_location" type="text" placeholder="Your Location">
+                </div>
+                <input class="button" type="submit" value="Search">
+            </form>
+        </section>
+    </body>
+</html>

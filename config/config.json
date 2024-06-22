@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "",
+    "database": "lojaol_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "bdposy_user",
+    "password": "ZiE5bVURX2Xlh7G93ooaKS6E2uU03WJX",
+    "host": "dpg-cp1q83sf7o1s73cghhi0-a.oregon-postgres.render.com",
+    "database": "database_production",
+    "dialectOptions": {
+      "ssl": true
+    },
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "lojaol_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
