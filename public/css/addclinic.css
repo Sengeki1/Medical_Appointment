@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+.overlay {
+    width: 90%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 50px 60px 70px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.header h1 {
+    font-weight: bold;
+    font-size: 23px;
+    color: black;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#clinic_name {
+    border: 0.5px solid black;
+    border-radius: 5px 5px 5px 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+#location {
+    border: 0.5px solid black;
+    border-radius: 5px 5px 5px 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+#type {
+    border: 0.5px solid black;
+    border-radius: 5px 5px 5px 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+#doctor {
+    border: 0.5px solid black;
+    border-radius: 5px 5px 5px 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+#employees {
+    border: 0.5px solid black;
+    border-radius: 5px 5px 5px 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.button #click {
+    border: 3px black; 
+    border-radius: 40px; 
+    background-color: black; 
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 16px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.button #click:hover {
+    background-color: lightskyblue;
+    color: black;
+    border: 3px lightskyblue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 40px;
+    transition: 300ms ease-in-out;
+}
+
+.sign-in {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.sign-in a {
+    color: blue;
+}

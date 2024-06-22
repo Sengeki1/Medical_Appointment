@@ -1,0 +1,28 @@
+.clinic-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.clinic-item {
+    border: 1px solid black;
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.clinic__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product__location {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.clinic__description {
+    text-align: center;
+}

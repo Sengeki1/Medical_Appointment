@@ -1,9 +1,9 @@
 const clinic = require('../models/clinicSchema');
 
 exports.getAddClinic = (req, res, next) => {
-  clinic.findAll().then((clinics) => {
-    res.render('clinic/clinic-list', {
-      clinic: clinics,
+  clinic.find().then((clinics) => {
+    res.render('Clinic/index', {
+      clinics: clinics,
       pageTitle: 'All clinics'
     });
   }).catch(err => {
@@ -11,18 +11,26 @@ exports.getAddClinic = (req, res, next) => {
   });
 };
 
-exports.postAddClinic = (req, res, next) => {
+exports.showAddClinic = (req, res, next) => {
+  res.render('Clinic/edit_clinic',);
+}
 
-  const Clinic = {
-    name: req.body.clinic_name,
+exports.success = (req, res, next) => {
+  res.render('Clinic/success',);
+};
+
+exports.postAddClinic = (req, res, next) => {
+  const newClinic = new clinic({
+    clinic_name: req.body.clinic_name,
     location: req.body.location,
+    type: req.body.type,
     doctor: req.body.doctor,
     employees: req.body.employees
-  }
-  Clinic.save()
+  });
+  newClinic.save()
   .then(() => {
     console.log('Clinic added');
-    res.status(200)
+    res.redirect('/admin/show-clinic-created')
   })
   .catch(err => {
     console.log(err);

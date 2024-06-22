@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/addclinic.css" rel="stylesheet">
+        <title>Register</title>
+        <script src="https://kit.fontawesome.com/4e4c23d5e2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="overlay">
+            <div class="header">
+                <h1>Edit Clinics</h1>
+                <p>Add Clinic</p>
+            </div>
+            <br>
+            <form id="register" action="/admin/add-clinic" method="POST">
+                <div id="input-field">
+                    <label for="clinic_name"></label>
+                    <input id="clinic_name" name="clinic_name" type="text" placeholder="Clininc Name">
+                </div>
+                <div id="input-field">
+                    <label for="location"></label>
+                    <input id="location" name="location" type="text" placeholder="Location">
+                </div>
+                <div id="input-field">
+                    <label for="type"></label>
+                    <input id="type" name="type" type="text" placeholder="Clinic Type">
+                </div>
+                <div id="input-field">
+                    <label for="doctor"></label>
+                    <input id="doctor" name="doctor" type="text" placeholder="Doctor">
+                </div>
+                <div id="input-field">
+                    <label for="employees"></label>
+                    <input id="employees" name="employees" type="number" placeholder="Employees">
+                </div>
+                <div class="button">
+                    <label for="click"></label>
+                    <input id="click" name="click" type="submit" value="Add">
+                </div>
+            </form>
+        </section>
+    </body>
+</html>

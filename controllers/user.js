@@ -9,3 +9,7 @@ exports.singupUser = (req, res, next) => {
 exports.appointment = (req, res, next) => {
     res.render('Appointment/index',);
 };
+
+exports.success = (req, res, next) => {
+    res.render('Appointment/success',);
+};
