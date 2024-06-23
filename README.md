@@ -2,6 +2,7 @@
 
 ## How to start the application
 
+* npm i (to download the modules) 
 * npm start
 
 ### Access Routes
